@@ -1,22 +1,190 @@
-<!DOCTYPE <!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-    <meta charset="utf-8" />
-    <title>Student Bio</title>
+    <title>Simon's Bootstrap Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
+
 <body>
-    <h1>Student Bio</h1>    
-    <h2>Simon Kwok</h2>
-    <img src="pic.jpg" alt="my mug shot">
-    <br>
-    <p>My introduction.</p>
-    <p>Please use a place holder from <a href="http://www.lipsum.com" target="_blank">www.lipsum.com</a></p> 
-    <br>
-    <h2>Contact Info</h2>
-    <ul>
-        <li><strong>Email: </strong><a href="mailto:simonk@gmail.com">simonk@gmail.com</a></li>
-        <li><strong>Github: </strong><a href="#">simonkcoding</a></li>
-        <li><strong>Portfolio: </strong><a href="#">commming soon</a></li>
-    </ul>
+
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Simon Kwok</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="portfolio.html">Portfolio</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="main">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="myCarousel" class="carousel slide ml-0 mr-0" style="opacity:0">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li class="item1 active"></li>
+                            <li class="item2"></li>
+                            <li class="item3"></li>
+                            <!-- <li class="item4"></li> Add when item added-->
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner pl-0 pr-0  ml-0 mr-0" role="listbox">
+
+                            <div class="item active">
+                                
+                                <img src="assets/images/carousel_wordguess.jpg" alt="Chania" style=" height: 240px">
+                                <div class="carousel-caption">
+                                    <a href="https://simonkcoding.github.io/Word-Guess-Game/" target="_blank">
+                                    <h3>Word Guess Game</h3>
+                                    <p>Javascript, conditional statements, audio play</p></a>
+                                </div>
+                            </div>
+                            <!-- -->
+                            <div class="item">
+                                
+                                <img src="assets/images/carousel_crystal.jpg" alt="Chania" style=" height: 240px">
+                                <div class="carousel-caption">
+                                        <a href="https://simonkcoding.github.io/unit-4-game/" target="_blank">
+                                    <h3>Crystal Game</h3>
+                                    <p>CSS, Jquery, Timer</p></a>
+                                </div>
+                            </div>
+                             <!-- -->
+                             <!-- -->
+                            <div class="item">
+                                
+                                <img src="assets/images/carousel_trivia.jpg" alt="Chania" style=" height: 240px">
+                                <div class="carousel-caption">
+                                        <a href="https://simonkcoding.github.io/TriviaGame/" target="_blank">
+                                    <h3>Trivia Game</h3>
+                                    <p>CSS, Jquery, Timer</p></a>
+                                </div>
+                            </div>
+                             <!-- -->
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!--COntent-->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-xs-12">
+                    <div id="author" style="opacity:0">
+                        <img src="assets/images/pretty image.jpg" id="mugShot" alt="my mug shot" style="width:220px">
+                        <p id="intro">Enthusiastic web design learner taking Full Stack developing bootcamp. 
+                            Always keen on learning new syntax and code minimalism. 
+                            Excellence in team work and basic coding skills are demonstrated with portfolio projects.
+                        <br>
+                        <br>
+                        The 12-week full-stack curriculum includes HTML5, CSS3, JavaScript, jQuery, Bootstrap, 
+                        React.js, Node.js, C#, .Net, Database Theory, Bookshelf.js, MongoDB, MySQL, Command Line, 
+                        and Git. The data analytics curriculum includes advanced Excel, Python, JavaScript 
+                        (D3.js, Leaflet.js), HTML/CSS, API Interactions, social media mining, SQL, Tableau, 
+                        advanced statistics, machine learning, R, and Git/GitHub. 
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-4 col-xs-12">
+                    <div class="row">
+                        <div class="col-md-12">
+
+                            <div id="connect" style="opacity:0">
+                                <h3>Connect with Me</h3>
+                                <hr>
+                                <img src="assets/images/github-128.png" class="social" alt="Github" width="50px">
+                                <img src="assets/images/github-128.png" class="social" alt="LinkedIn" width="50px">
+                                <img src="assets/images/github-128.png" class="social" alt="Stack Overflow" width="50px">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div id="update" style="opacity:0">
+                                <h3>Update</h3>
+                                <hr>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="container-fluid">
+        <p>@CopyRight</p>
+    </footer>
+
+    <script>
+        $(document).ready(function () {
+            // Activate Carousel
+            $("#myCarousel").carousel();
+
+            // Enable Carousel Indicators
+            $(".item1").click(function () {
+                $("#myCarousel").carousel(0);
+            });
+            $(".item2").click(function () {
+                $("#myCarousel").carousel(1);
+            });
+            $(".item3").click(function () {
+                $("#myCarousel").carousel(2);
+            });
+            $(".item4").click(function () {
+                $("#myCarousel").carousel(3);
+            });
+
+            // Enable Carousel Controls
+            $(".left").click(function () {
+                $("#myCarousel").carousel("prev");
+            });
+            $(".right").click(function () {
+                $("#myCarousel").carousel("next");
+            });
+        });
+
+        var carouselTime = $('#myCarousel')
+        setTimeout(function () {
+            { carouselTime.fadeTo("slow", 1); }
+        }, 250);
+        var authorTime = $('#author')
+        setTimeout(function () {
+            { authorTime.fadeTo("slow", 1); }
+        }, 500);
+        var connectlTime = $('#connect')
+        setTimeout(function () {
+            { connectlTime.fadeTo("slow", 1); }
+        }, 750);
+        var updateTime = $('#update')
+        setTimeout(function () {
+            { updateTime.fadeTo("slow", 1); }
+        }, 1000);
+
+
+    </script>
+
+
+
 </body>
+
 </html>
