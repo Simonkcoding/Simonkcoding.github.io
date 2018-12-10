@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Simon Kwok Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
+</head>
+
+<body>
+    <div class='main'>
+        <section class='container container-intro parallax'>
+            <div class="overlay overlay-intro"></div>
+            <div class='home'>
+                <div class='pic'>
+                </div>
+                <div class='home-text'>
+                    <img src='./assets/images/pretty-image.jpg' class='mypic'>
+                    <h2 class='name'>Simon Kwok</h2>
+                    <h3>Web Developer, CAD Designer, Engineer in Training</h3>
+                    <div class="icons">
+                        <a href="#">
+                            <i class="fab fa-linkedin fa-2x"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fab fa-github fa-2x"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fas fa-envelope-square fa-2x"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class='container container-about'>
+            <div class='wrapper about-wrapper'>
+                <div class='textbox-left aboutme'>
+                    <h3>About me</h3>
+                    <p>I grew up in British Hong Kong and immigtrated to USA in 2011. I was so excited to persuade
+                        "American Dream".
+                        Within this seven years of living in Charlotte, NC, I completed an accredited Mechanical
+                        Engineering degree offered by UNCC.
+                    </p>
+                    <p>The most challenging in the school was not the physics and mathematics, but the computer
+                        simulation.
+                        Since then I start training myself working with computer, instead of just pencil and paper. 3D
+                        CAD
+                        was my first goal and I made it.
+                        I landed on my first job as a CAD designer in 2017.</p>
+                    <p>In 2018, I want to step out of my comfort zone and challenge myself for Trilogy's coding boot
+                        camp.
+                        I acquired knowledge to develop a full stack web project and gradauted with an A. I am
+                        currently looking for job opportunity of web developer, perferly working with React and
+                        Angular.</p>
+                    <p>If you are interested
+                        in knowing more about me, please read the resume and contact me!</p>
+                </div>
+                <div class='resume'>
+                    <h3>My resume</h3>
+                    <i class="fa fa-file-download fa-8x"></i>
+                </div>
+                <h3 style='text-align:left; padding-left:20px'>My Past</h3>
+                <div class='textbox job job-1'>
+                    <div class="job-pic-1">
+                    </div>
+                    <h3 class='job-text'>CAD Designer</h3>
+                    <p class='job-text'>Want to see a big system looks like before it is built? My drawing tells
+                        customers everthing!</p>
+                </div>
+                <div class='textbox job job-2'>
+                    <div class="job-pic-2">
+                    </div>
+                    <h3 class='job-text'>Internship</h3>
+                    <p class='job-text'>Manufacturing Experience. My responsiblity was to study the production flow.
+                        Safety is the first!</p>
+                </div>
+                <div class='textbox job job-3'>
+                    <div class="job-pic-3">
+                    </div>
+                    <h3 class='job-text'>Researches</h3>
+                    <p class='job-text'>Finite Element Analysis to calculate mechanical stress under bending. Made it
+                        or break it!</p>
+                </div>
+            </div>
+        </section>
+        <section class='container container-skills parallax'>
+            <div class="overlay overlay-skills"></div>
+            <div class="parallax-text">
+                <div class="skill-header">
+                    <h2 style='margin-top:0;color:white'>My Coding skills</h2>
+                </div>
+                <div class="textbox skill skill-1">
+                    <img src='./assets/images/mern.jpg'>
+                    <p>Full stack webdevelopment with Mongo DB, Express js, React, and Node js.</p>
+                </div>
+                <div class="textbox skill skill-2">
+
+                    <img src='./assets/images/jquery.gif'>
+                    <p>Dynamic control of DOM. Ajax and JSON to fetch data from 3rd party API</p>
+                </div>
+                <div class="textbox skill skill-3">
+
+                    <img src='./assets/images/htmlcss.png'>
+                    <p>Two core techologies to build web pages. Cool animation with CSS and Bootstrap.</p>
+                </div>
+            </div>
+        </section>
+        <section class='container container-portfolio'>
+            <div class='wrapper portfolio-wrapper'>
+                <div class='bootcamp-projects'>
+                    <h2>Portfolio</h2>
+                    <span>
+                        <h3>Boot Camp Projects</h3>
+                    </span>
+                    <div class="bc-project bc-project-1">
+                        <div class="project-overlay project-overlay-1">
+                            <div class="inner-div" onclick='toggleModal1()'>
+                                <p class='inner-div-text'>You can find concert tickets, flight tickets and nearby
+                                    restaurant in just ONE apps!</p>
+                            </div>
+                        </div>
+                        <a href="https://sk-budgetmax.herokuapp.com/">
+                            <img class='project-img' src="assets/images/travelgroupie.png" alt="bc-project2"></a>
+                        <div class="modal" id="modal1">
+                            <div class="modal-content">
+                                <span class="close" onclick='closeModal1()'>&times;</span>
+                                <div class="modal-pic">
+                                    <img class='modal-img' src="assets/images/travelgroupie2.png" alt="bc-project2">
+                                </div>
+                                <div class="modal-text">
+                                    <span class='proj-title'>Travelgroupie</span>
+                                    <hr />
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, veniam.</p>
+                                    <span class="proj-cat">Date: </span><span class="proj-info">11th Sep 2018</span><br />
+                                    <span class="proj-cat">Techologies: </span><span class="proj-info">3rd party APIs,
+                                        Firbase authentication and database</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bc-project bc-project-2">
+                        <div class="project-overlay project-overlay-2">
+                            <div class="inner-div" onclick='toggleModal2()''>
+                                <p class='
+                                inner-div-text'>A financial App which visualize your spending trends!</p>
+                            </div>
+                        </div>
+                        <a href="https://sk-budgetmax.herokuapp.com/">
+                            <img class='project-img' src="assets/images/budgetmax.png" alt="bc-project2"></a>
+                        <div class="modal" id="modal2">
+                            <div class="modal-content">
+                                <span class="close" onclick='closeModal2()'>&times;</span>
+                                <div class="modal-pic">
+                                    <img class='modal-img' src="assets/images/budgetmax2.png" alt="bc-project2">
+                                </div>
+                                <div class="modal-text">
+                                    <span class='proj-title'>BudgetMax</span>
+                                    <hr />
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, veniam.</p>
+                                    <span class="proj-cat">Date: </span><span class="proj-info">11th Sep 2018</span><br />
+                                    <span class="proj-cat">Techologies: </span><span class="proj-info">Chart js,
+                                        Passport js authentication, mySQL database, Express js</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bc-project  bc-project-3">
+                        <div class="project-overlay project-overlay-3">
+                            <div class="inner-div" onclick='toggleModal3()''>
+                                <p class='
+                                inner-div-text'>School management sytems allows real-time message and GPA
+                                transcript!</p>
+                            </div>
+                        </div>
+                        <a href="https://sk-powerschool.herokuapp.com/">
+                            <img class='project-img' src="assets/images/powerschool.png" alt="bc-project3"></a>
+                        <div class="modal" id="modal3">
+                            <div class="modal-content">
+                                <span class="close" onclick='closeModal3()'>&times;</span>
+                                <div class="modal-pic">
+                                    <img class='modal-img' src="assets/images/powerschool2.png" alt="bc-project2">
+                                </div>
+                                <div class="modal-text">
+                                    <span class='proj-title'>Powerschool renewal</span>
+                                    <hr />
+                                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis, veniam.</p>
+                                    <span class="proj-cat">Date: </span><span class="proj-info">11th Sep 2018</span><br />
+                                    <span class="proj-cat">Techologies: </span><span class="proj-info">React,
+                                        Passport js authentication, Mongo DB database, Socket Io, Express js, Particle
+                                        js</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class='other-projects'>
+                    <span>
+                        <h3>Selected Projects</h3>
+                    </span>
+                    <div class="project etc-project-1">
+                        <div class="project-info-1">
+                            <h4>MERN Project: Joining in mongoDB</h4>
+                        </div>
+                        <div class="project-img project-img-1">
+                            <div class="project-ctrl">
+                                <a href="https://github.com/Simonkcoding/baby-toy" target='_blank'>
+                                    <span class="githublink">Github<i class="fab fa-github"></i></span></a>
+                                <a href="https://blooming-plains-88199.herokuapp.com/" target='_blank'>
+                                    <span class="webpagelink">Link <i class="fas fa-link"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project etc-project-2">
+                        <div class="project-info-2">
+                            <h4>Giphy API JSON, JQuery DOM</h4>
+                        </div>
+                        <div class="project-img project-img-2">
+                            <div class="project-ctrl">
+                                <a href="https://simonkcoding.github.io/GifTastic/" target='_blank'>
+                                    <span class="githublink">Github<i class="fab fa-github"></i></span></a>
+                                <!-- <a href="https://simonkcoding.github.io/GifTastic/">
+                                        <span class="webpagelink">Link <i class="fas fa-link"></i></span></a> -->
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project etc-project-3">
+                        <div class="project-info-3">
+                            <h4>NYT API with React and MongoDB</h4>
+                        </div>
+                        <div class="project-img project-img-3">
+                            <div class="project-ctrl">
+                                <a href="https://github.com/Simonkcoding/NYT-React-remake" target='_blank'>
+                                    <span class="githublink">Github<i class="fab fa-github"></i></span></a>
+                                <a href="https://sk-nyc-mern.herokuapp.com/" target='_blank'>
+                                    <span class="webpagelink">Link <i class="fas fa-link"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project etc-project-4">
+                        <div class="project-info-4">
+                            <h4>Friend Finder: Routing and Handlebars</h4>
+                        </div>
+                        <div class="project-img project-img-4">
+                            <div class="project-ctrl">
+                                <a href="https://github.com/Simonkcoding/FriendFinder" target='_blank'>
+                                    <span class="githublink">Github<i class="fab fa-github"></i></span></a>
+                                <a href="https://stark-atoll-79039.herokuapp.com/" target='_blank'>
+                                    <span class="webpagelink">Link <i class="fas fa-link"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project etc-project-5">
+                        <div class="project-info-5">
+                            <h4>Eat-dat-Burger mySQL table manipulation</h4>
+                        </div>
+                        <div class="project-img project-img-5">
+                            <div class="project-ctrl">
+                                <a href="https://github.com/Simonkcoding/Eat-Da-Burger" target='_blank'>
+                                    <span class="githublink">Github<i class="fab fa-github"></i></span></a>
+                                <a href="https://vast-fjord-57429.herokuapp.com/" target='_blank'>
+                                    <span class="webpagelink">Link <i class="fas fa-link"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project etc-project-6">
+                        <div class="project-info-6">
+                            <h4>Word Guess Game, Vanilla JavaScript</h4>
+                        </div>
+                        <div class="project-img project-img-6">
+                            <div class="project-ctrl">
+                                <a href="https://github.com/Simonkcoding/Word-Guess-Game" target='_blank'>
+                                    <span class="githublink">Github<i class="fab fa-github"></i></span></a>
+                                <a href="https://simonkcoding.github.io/Word-Guess-Game/" target='_blank'>
+                                    <span class="webpagelink">Link <i class="fas fa-link"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project etc-project-7">
+                        <div class="project-info-7">
+                            <h4>Crystal Game, Vanilla JavaScript</h4>
+                        </div>
+                        <div class="project-img project-img-7">
+                            <div class="project-ctrl">
+                                <a href="https://github.com/Simonkcoding/unit-4-game/" target='_blank'>
+                                    <span class="githublink">Github<i class="fab fa-github"></i></span></a>
+                                <a href="https://simonkcoding.github.io/unit-4-game/" target='_blank'>
+                                    <span class="webpagelink">Link <i class="fas fa-link"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project etc-project-8">
+                        <div class="project-info-8">
+                            <h4>Trivia Game, JQuery and CSS animation</h4>
+                        </div>
+                        <div class="project-img project-img-8">
+                            <div class="project-ctrl">
+                                <a href="https://github.com/Simonkcoding/TriviaGame/" target='_blank'>
+                                    <span class="githublink">Github<i class="fab fa-github"></i></span></a>
+                                <a href="https://simonkcoding.github.io/TriviaGame/" target='_blank'>
+                                    <span class="webpagelink">Link <i class="fas fa-link"></i></span></a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <footer>
+            <p>@Copyright</p>
+        </footer>
+    </div>
+    <script>
+        function toggleModal1() {
+            var modal = document.getElementById('modal1');
+            // modal.style.display = "block";
+            modal.style.visibility = 'visible';
+            modal.style.opacity = 1;
+        }
+
+
+        function closeModal1() {
+            var modal = document.getElementById('modal1');
+            modal.style.visibility = 'hidden';
+            modal.style.opacity = 0;
+        }
+        function toggleModal2() {
+            var modal = document.getElementById('modal2');
+            modal.style.visibility = 'visible';
+            modal.style.opacity = 1;
+        }
+
+        function closeModal2() {
+            var modal = document.getElementById('modal2');
+            modal.style.visibility = 'hidden';
+            modal.style.opacity = 0;
+        }
+
+        function toggleModal3() {
+            var modal = document.getElementById('modal3');
+            modal.style.visibility = 'visible';
+            modal.style.opacity = 1;
+        }
+
+        function closeModal3() {
+            var modal = document.getElementById('modal3');
+            modal.style.visibility = 'hidden';
+            modal.style.opacity = 0;
+        }
+
+
+
+    </script>
+</body>
+
+</html>
