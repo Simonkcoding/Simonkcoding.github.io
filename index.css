@@ -7,7 +7,12 @@ a{
     text-decoration: none;
     color: white;
 }
+.nav-item:hover{
+transform: scale(1.2,1.2)
+}
+
 .nav-item{
+    transition: all 0.6s;
 width:100px;
 height:100px;
 border-radius:50%;
@@ -80,7 +85,7 @@ position: relative;
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f1f1f1;
+    background-color: #6bb49c;
     min-width: 160px;
     overflow: auto;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
@@ -88,7 +93,7 @@ position: relative;
 }
 
 .dropdown-content a {
-    color: black;
+    color: rgb(255, 255, 255);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
@@ -444,6 +449,10 @@ margin:auto;
 }
 .proj-cat{
     color: rgb(218, 80, 206);
+    font-weight:24px;
+}
+.proj-link{
+    color: rgb(64, 67, 235);
     font-weight:24px;
 }
 .proj-title{
