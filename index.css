@@ -7,6 +7,104 @@ a{
     text-decoration: none;
     color: white;
 }
+.nav-item{
+width:100px;
+height:100px;
+border-radius:50%;
+margin:10px 10px 30px 10px;
+box-shadow: 0 0 5px 5px #C8C9C1 inset;
+background-color:#75AD20;
+position: relative;
+}
+.nav-icon{
+    color:white;
+    margin:auto;
+    position: absolute;
+    top:25%;
+    left:25%;
+}
+.nav-text{
+    text-align: center;
+    color:white;
+    margin:0 auto;
+    position: absolute;
+    top:65%;
+    left:20%;
+}
+.nav{
+    position:fixed;
+    top:30vh;
+    right:0;
+    z-index: 10;
+}
+.nav2 {
+    display: none;
+    cursor: pointer;
+    background-color: #75AD20;
+    position: fixed;
+    top:5%;
+    left:5px;
+    width: 50px;
+    height:50px;
+    text-align: center;
+    border-radius: 10px;
+    margin:0;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 80%;
+    height: 3px;
+    background-color: #C8C9C1;
+    margin: 10px 5px;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-11px, 8px);
+    transform: rotate(-45deg) translate(-11px, 8px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-9px, -8px);
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+
+
+.green-head3{
+    text-align: left !important;
+    font-family: 'Abril Fatface', cursive;
+    color:darkgreen;
+    font-size: 30px;
+}
 .fab{
     margin:0 3px 0 3px;
 }
@@ -14,11 +112,15 @@ a{
     width:80%;
     margin:auto;
 }
+.home{
+    z-index:10;
+}
 .home-text{
     text-align: center;
     padding:60px 5px 5px 5px;
     color: white;
     font-weight: 16px;
+    z-index:10;
 }
 .mypic{
     border:yellow solid 2px;;
@@ -35,7 +137,6 @@ a{
     background-attachment: fixed;
     height:450px;
     width:100%;
-    z-index:-1;
 }
 
 .container-skills{
@@ -50,7 +151,19 @@ a{
     overflow: auto;
 }
 
-.overlay{
+.overlay-intro{
+    height:450px;
+    width:100%;
+    background-color:rgb(155, 155, 155);
+    opacity: 0.4;
+    position: absolute;
+    top:0;
+    right:0;
+    z-index: 0;
+    pointer-events: none
+}
+
+.overlay-skills{
     height:450px;
     width:100%;
     background-color:rgb(155, 155, 155);
@@ -80,24 +193,38 @@ a{
     top:0;
     left:0;
     padding:10px;
-    width: 30%;
-   
+    width: 30%; 
+    min-width:250px;
+}
+.circle{
+    border: lightseagreen 9px solid;
+    border-radius: 50%;
+    width:200px;
+    height:200px;
+    margin:auto;
+    text-align: center;
+}
+.resume:hover .fa-file-download{
+    color: rgba(3, 151, 3, 0.733);
+    transition: 0.9s;
+    transform: rotateY(180deg);
 }
 .fa-file-download{
     padding:10px;
-    color: grey;
+    color: rgb(59, 121, 236);
+    opacity:1
 }
 
 .textbox-left{
     display: inline-block;
-    min-width:200px;
+    min-width:270px;
     text-align: left;
     margin:0;
 }
 
 .job{
     padding:0 !important;
-    width:20% !important;
+   
     vertical-align: top;
     min-height:300px;
     overflow: auto;
@@ -106,6 +233,7 @@ a{
     -moz-box-shadow:    3px 3px 5px 6px #ccc;  
     box-shadow:         3px 3px 5px 6px #ccc;
     text-align: left !important;
+
 }
 .job-pic-1{
     margin:0;
@@ -114,6 +242,7 @@ a{
     background-size: cover;
     width:100%;
     min-height:270px;
+   
 }
 .job-pic-2{
     margin:0;
@@ -122,6 +251,7 @@ a{
     background-size: cover;
     width:100%;
     min-height:270px;
+  
 }
 .job-pic-3{
     margin:0;
@@ -130,10 +260,15 @@ a{
     background-size: cover;
     width:100%;
     min-height:270px;
+    
 }
 .job-text,
 .project-text{
     padding:0 5px 0 5px;
+    
+}
+.skill{
+    min-width:250px !important;
 }
 .project-img{
 width:100%;
@@ -142,7 +277,7 @@ margin:auto;
 .bc-project{
     vertical-align: top;
     width:25%;
-    min-width:250px;
+    min-width: 270px;
     /* height:200px; */
     margin:5px 0 5px 0;
     border-radius:2px;
@@ -210,7 +345,8 @@ margin:auto;
     vertical-align: top;
     padding:5px;
     width:30%;
-    min-width:200px;
+    min-width:270px;
+    
     text-align: center;
     display: inline-block;
     margin:5px;
@@ -230,9 +366,12 @@ margin:auto;
     width:100%;
 }
 
-.project,
 .skill{
     padding-top:40px;
+    min-height:250px;
+    background-color: rgba(255, 255, 255, 0.7);  
+}
+.project{
     min-height:250px;
     background-color: rgba(255, 255, 255, 0.7);  
 }
@@ -243,15 +382,8 @@ margin:auto;
     left:0;
 }
 
-.nav{
-    height:88px;
-    background-color: azure;
-}
-
 /* The Modal (background) */
 .modal {
-    /* display: none;  */
-    
     visibility: hidden;
     opacity: 0;
     position: fixed; /* Stay in place */
@@ -410,4 +542,22 @@ margin:auto;
     border: rgb(197, 195, 195) 2px solid;
     border-radius: 3px;
     color:white;
+}
+
+footer{
+    color: white;
+    font-weight:20px;
+    height:5vh;
+    text-align: center;
+    background: url('./assets/images/minimalism1.jpg')no-repeat center;
+    background-size: cover;
+}
+
+@media only screen and (max-width: 600px) {
+.nav{
+    display:none;
+}
+.nav2{
+    display: block;
+}
 }

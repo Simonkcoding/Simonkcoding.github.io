@@ -10,14 +10,44 @@
         crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Marck+Script|Noto+Sans+JP" rel="stylesheet">
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
 
 <body>
-    <div class='main'>
+    <div class='main' onclick="myFunction(this)">
+        <div class="nav2">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+            <div id="myDropdown" class="dropdown-content">
+                <a href="#home">About</a>
+                <a href="#job">Skills</a>
+                <a href="#portfolio">Portfolio</a>
+            </div>
+        </div>
+        <div class="nav">
+            <a href="#home">
+                <div class="nav-item about">
+                    <i class="nav-icon fab fa-fort-awesome-alt fa-2x"></i>
+                    <p class='nav-text'>About</p>
+                </div>
+            </a>
+            <a href="#job">
+                <div class="nav-item learnt">
+                    <i class="nav-icon fas fa-book fa-2x"></i>
+                    <p class='nav-text'>Skills</p>
+                </div>
+            </a>
+            <a href="#portfolio">
+                <div class="nav-item portfo">
+                    <i class="nav-icon far fa-images fa-2x"></i>
+                    <p class='nav-text'>Portfo</p>
+                </div>
+            </a>
+        </div>
         <section class='container container-intro parallax'>
-            <div class="overlay overlay-intro"></div>
-            <div class='home'>
+            <div class='home' id='home'>
                 <div class='pic'>
                 </div>
                 <div class='home-text'>
@@ -25,23 +55,24 @@
                     <h2 class='name'>Simon Kwok</h2>
                     <h3>Web Developer, CAD Designer, Engineer in Training</h3>
                     <div class="icons">
-                        <a href="#">
+                        <a href="https://www.linkedin.com/in/simon-kwok/" target='_blank'>
                             <i class="fab fa-linkedin fa-2x"></i>
                         </a>
-                        <a href="#">
+                        <a href="https://github.com/Simonkcoding" target='_blank'>
                             <i class="fab fa-github fa-2x"></i>
                         </a>
-                        <a href="#">
+                        <a href="mailto:simonkcareer@gmail.com">
                             <i class="fas fa-envelope-square fa-2x"></i>
                         </a>
                     </div>
                 </div>
             </div>
+            <div class="overlay overlay-intro"></div>
         </section>
         <section class='container container-about'>
             <div class='wrapper about-wrapper'>
                 <div class='textbox-left aboutme'>
-                    <h3>About me</h3>
+                    <h3 class='green-head3'>About me</h3>
                     <p>I grew up in British Hong Kong and immigtrated to USA in 2011. I was so excited to persuade
                         "American Dream".
                         Within this seven years of living in Charlotte, NC, I completed an accredited Mechanical
@@ -62,10 +93,16 @@
                         in knowing more about me, please read the resume and contact me!</p>
                 </div>
                 <div class='resume'>
-                    <h3>My resume</h3>
-                    <i class="fa fa-file-download fa-8x"></i>
+
+                    <h3 class='green-head3' style='text-align: center'>My resume</h3>
+                    <div class="circle">
+                        <a target='_bank' href="https://www.linkedin.com/in/simon-kwok/detail/treasury/summary/?entityUrn=urn%3Ali%3Afs_treasuryMedia%3A(ACoAAB7Z7UUBtraEHiDmL7h4ov6HiAXDBIWNmhw%2C1540297057596)&section=summary&treasuryCount=2"><i
+                                class="fa fa-file-download fa-8x"></i></a>
+                        <p style="font-family: 'Marck Script', cursive; ">LinkedIn Resume</p>
+                    </div>
+
                 </div>
-                <h3 style='text-align:left; padding-left:20px'>My Past</h3>
+                <h3 style='text-align:left; padding-left:20px' class='green-head3' id='job'>My Past</h3>
                 <div class='textbox job job-1'>
                     <div class="job-pic-1">
                     </div>
@@ -113,11 +150,12 @@
         </section>
         <section class='container container-portfolio'>
             <div class='wrapper portfolio-wrapper'>
-                <div class='bootcamp-projects'>
-                    <h2>Portfolio</h2>
+                <div class='bootcamp-projects' id='portfolio'>
+                    <h2 style="font-family: 'Marck Script', cursive; font-size: 60px;">Portfolio</h2>
                     <span>
-                        <h3>Boot Camp Projects</h3>
+                        <h3 class='green-head3'>Boot Camp Projects</h3>
                     </span>
+                    <hr>
                     <div class="bc-project bc-project-1">
                         <div class="project-overlay project-overlay-1">
                             <div class="inner-div" onclick='toggleModal1()'>
@@ -201,8 +239,9 @@
                 </div>
                 <div class='other-projects'>
                     <span>
-                        <h3>Selected Projects</h3>
+                        <h3 class='green-head3'>Selected Projects</h3>
                     </span>
+                    <hr>
                     <div class="project etc-project-1">
                         <div class="project-info-1">
                             <h4>MERN Project: Joining in mongoDB</h4>
@@ -310,15 +349,37 @@
 
                 </div>
             </div>
+
+            <div class="nav-btn">
+
+            </div>
         </section>
         <footer>
             <p>@Copyright</p>
         </footer>
     </div>
     <script>
+        function myFunction(x) {
+            x.classList.toggle("change");
+            document.getElementById("myDropdown").classList.toggle("show");
+        }
+
+        window.onclick = function (event) {
+            if (!event.target.matches('.nav2')) {
+
+                var dropdowns = document.getElementsByClassName("dropdown-content");
+                var i;
+                for (i = 0; i < dropdowns.length; i++) {
+                    var openDropdown = dropdowns[i];
+                    if (openDropdown.classList.contains('show')) {
+                        openDropdown.classList.remove('show');
+                    }
+                }
+            }
+        }
+
         function toggleModal1() {
             var modal = document.getElementById('modal1');
-            // modal.style.display = "block";
             modal.style.visibility = 'visible';
             modal.style.opacity = 1;
         }
